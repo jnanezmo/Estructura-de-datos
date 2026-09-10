@@ -1,4 +1,3 @@
-
 public class sueldoTrabajdores {
     public static void main(String[] args) {
      
