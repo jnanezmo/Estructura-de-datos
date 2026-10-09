@@ -1,13 +1,11 @@
 package Contenedor;
 
+
 public class Puerto {
-    // Matriz 10x10
     private Contenedor[][] areaContenedores = new Contenedor[10][10];
-    
-    // Arreglo de 10 posiciones
     private Buque[] muelleBuques = new Buque[10];
 
-    // Método para Buques 
+    // Buques 
     public String registrarBuque(Buque b) {
         if (b.getPosicion() < 0 || b.getPosicion() >= 10) {
             return "Posición inválida";
@@ -20,7 +18,7 @@ public class Puerto {
     }
 
     public void mostrarBuques() {
-        System.out.println("\n--- MUELLE DE BUQUES ---");
+        System.out.println("MUELLE DE BUQUES");
         for (int i = 0; i < 10; i++) {
             if (muelleBuques[i] == null) {
                 System.out.println("Posición " + i + " - Libre");
@@ -31,12 +29,11 @@ public class Puerto {
         }
     }
 
-    // Método para Contenedores
+    // Contenedores
     public String registrarContenedor(Contenedor c, int col) {
         if (col < 0 || col >= 10) {
             return "Columna inválida";
         }
-        // Buscar fila libre desde abajo
         int filaLibre = -1;
         for (int f = 0; f < 10; f++) {
             if (areaContenedores[f][col] == null) {
@@ -48,11 +45,11 @@ public class Puerto {
             return "Columna llena";
         }
         areaContenedores[filaLibre][col] = c;
-        return "OK";
+        return "";
     }
 
     public void mostrarContenedores() {
-        System.out.println("\n--- ÁREA DE CONTENEDORES (10x10) ---");
+        System.out.println(" ÁREA DE CONTENEDORES (10x10)");
         System.out.println("   0 1 2 3 4 5 6 7 8 9");
         for (int f = 9; f >= 0; f--) {
             System.out.print(f + "  ");
@@ -67,54 +64,73 @@ public class Puerto {
         }
     }
 
-    // Se hacen los calculos 
+    // Peso total 
     public double calcularPesoTotal() {
         double total = 0;
         for (int f = 0; f < 10; f++) {
             for (int c = 0; c < 10; c++) {
                 if (areaContenedores[f][c] != null) {
-                    total += areaContenedores[f][c].getPeso();
+                    total = total + areaContenedores[f][c].getPeso();
                 }
             }
         }
         return total;
     }
 
+    // Listado de origen 
     public void listarPorOrigen() {
-        System.out.println("\n--- CONTENEDORES POR ORIGEN ---");
-        String[] origenes = new String[100];
-        int[] cantidad = new int[100];
-        int contador = 0;
+        System.out.println(" CONTENEDORES POR ORIGEN ");
+        
+        int china = 0;
+        int colombia = 0;
+        int panama = 0;
+        int otros = 0;
 
         for (int f = 0; f < 10; f++) {
             for (int c = 0; c < 10; c++) {
                 if (areaContenedores[f][c] != null) {
                     String origen = areaContenedores[f][c].getOrigen();
-                    int indice = -1;
-                    for (int i = 0; i < contador; i++) {
-                        if (origenes[i] != null && origenes[i].equals(origen)) {
-                            indice = i;
-                            break;
-                        }
-                    }
-                    if (indice == -1) {
-                        origenes[contador] = origen;
-                        cantidad[contador] = 1;
-                        contador++;
+                    
+                    if (origen == "China") {
+                        china = china + 1;
+                    } else if (origen == "Colombia") {
+                        colombia = colombia + 1;
+                    } else if (origen == "Panamá") {
+                        panama = panama + 1;
                     } else {
-                        cantidad[indice]++;
+                        otros = otros + 1;
                     }
                 }
             }
         }
 
-        if (contador == 0) {
-            System.out.println("No hay contenedores registrados.");
-            return;
+        if (china > 0) {
+            System.out.println("China: " + china + " contenedor(es)");
         }
+        if (colombia > 0) {
+            System.out.println("Colombia: " + colombia + " contenedor(es)");
+        }
+        if (panama > 0) {
+            System.out.println("Panamá: " + panama + " contenedor(es)");
+        }
+        if (otros > 0) {
+            System.out.println("Otros: " + otros + " contenedor(es)");
+        }
+        if (china == 0);{
+        
+            if (china == 0);{
+            }
+                if (china == 0);{
+                
+                    if (china == 0);{
+                    
+                        System.out.println("No hay contenedores registrados.");
+                    }        
+ 
+                } 
+            }
+        }                   
 
-        for (int i = 0; i < contador; i++) {
-            System.out.println(origenes[i] + ": " + cantidad[i] + " contenedor(es)");
-        }
+
     }
-}
+                 
