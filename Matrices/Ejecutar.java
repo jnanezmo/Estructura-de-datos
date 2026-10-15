@@ -1,5 +1,7 @@
 package Matrices;
 
+import Semana4Taller.OperacionesMatrices;
+
 public class Ejecutar {
     public static void main(String[] args) {
         
@@ -13,6 +15,5 @@ public class Ejecutar {
         //mostrar la matriz
         System.out.println(objM.imprimirMatriz(matriz));
     }    
+    
 }
-  
-

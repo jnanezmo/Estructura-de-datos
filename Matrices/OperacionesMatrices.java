@@ -1,4 +1,5 @@
 package Matrices;
+
 public class OperacionesMatrices {
     
     //Método que permite llenar la matriz con números enteros
@@ -20,7 +21,7 @@ public class OperacionesMatrices {
             for(int j = 0; j < m[0].length; j++){
                 cad+= m[i][j] + "|";
             }
-            cad+= "\n"; //Salto de línea --> \n
+            cad+= ""; //Salto de línea --> \n
         }
         return cad;
     }
