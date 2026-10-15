@@ -1,4 +1,4 @@
-package GestionEstudiantes;
+package TallerPracticoSemana6;
 
 public class Estudiante {
     private int codigo;
