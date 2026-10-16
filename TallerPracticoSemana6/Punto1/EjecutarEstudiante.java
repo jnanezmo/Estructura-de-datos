@@ -1,4 +1,4 @@
-package TallerPracticoSemana6;
+package TallerPracticoSemana6.Punto1;
 //Actividad 1. Arreglos de objetos: Gestión de estudiantes
 //Desarrolle una aplicación que permita administrar la información académica de un grupo de hasta 10 estudiantes.
 //Cada estudiante debe tener código, nombre, programa académico y promedio.
@@ -48,4 +48,3 @@ public class EjecutarEstudiante {
         System.out.println("Cantidad de estudiantes: " + estudiantes.length);
     }
 }
-

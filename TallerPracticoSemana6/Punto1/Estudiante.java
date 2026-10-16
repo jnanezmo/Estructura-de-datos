@@ -1,4 +1,4 @@
-package TallerPracticoSemana6;
+package TallerPracticoSemana6.Punto1;
 
 public class Estudiante {
     private int codigo;
@@ -89,4 +89,3 @@ public class Estudiante {
         return mejor;
     }
 }
-
