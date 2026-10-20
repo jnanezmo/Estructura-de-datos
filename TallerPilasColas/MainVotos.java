@@ -1,17 +1,22 @@
 package TallerPilasColas;
+ //Dados dos contadores: upvotes y downvotes, modela cada voto en una cola como +1
+ //(a favor) o-1 (en contra). Procesa la cola sumando todos los valores hasta vaciarla. Retorna la
+ //diferencia: (a favor) − (en contra).
+ //Ejemplos de verificacion.
+ //Entrada: upvotes = 13, downvotes = 0 Salida esperada: 13
+ //Entrada: upvotes = 2, downvotes = 33 Salida esperada:-31
+ //Entrada: upvotes = 132, downvotes = 132 Salida esperada: 0
 
 public class MainVotos {
     public static void main(String[] args) {
-        Votos votos = new Votos();
-        votos.agregarVoto("Candidato A");
-        votos.agregarVoto("Candidato B");
-        votos.agregarVoto("Candidato A");
-        votos.agregarVoto("Candidato C");
-        votos.agregarVoto("Candidato B");
-
-        System.out.println("Total de votos para Candidato A: " + votos.contarVotos("Candidato A"));
-        System.out.println("Total de votos para Candidato B: " + votos.contarVotos("Candidato B"));
-        System.out.println("Total de votos para Candidato C: " + votos.contarVotos("Candidato C"));
-    }
+       System.out.println("Resultado de la votación: " + procesarVotos(13, 0)); // Salida esperada: 13
+         System.out.println("Resultado de la votación: " + procesarVotos(2, 33)); // Salida esperada: -31
+         System.out.println("Resultado de la votación: " + procesarVotos(132        , 132)); // Salida esperada: 0
     
+      }
+
+    public static int procesarVotos(int upvotes, int downvotes) {
+        VotosFavorEncontra votos = new VotosFavorEncontra();
+        return votos.calcularDiferencia(upvotes, downvotes);
+    }
 }
