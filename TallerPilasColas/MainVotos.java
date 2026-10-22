@@ -8,15 +8,18 @@ package TallerPilasColas;
  //Entrada: upvotes = 132, downvotes = 132 Salida esperada: 0
 
 public class MainVotos {
-    public static void main(String[] args) {
-       System.out.println("Resultado de la votación: " + procesarVotos(13, 0)); // Salida esperada: 13
-         System.out.println("Resultado de la votación: " + procesarVotos(2, 33)); // Salida esperada: -31
-         System.out.println("Resultado de la votación: " + procesarVotos(132        , 132)); // Salida esperada: 0
-    
-      }
 
-    public static int procesarVotos(int upvotes, int downvotes) {
-        VotosFavorEncontra votos = new VotosFavorEncontra();
-        return votos.calcularDiferencia(upvotes, downvotes);
+
+ 
+ public static void main(String[] args) {
+
+        System.out.println("Resultado 1: " + VotosFavorEncontra.calcularDiferencia(13, 0));
+        System.out.println("Resultado 2: " + VotosFavorEncontra.calcularDiferencia(2, 33));
+        System.out.println("Resultado 3: " + VotosFavorEncontra.calcularDiferencia(132, 132));
+
     }
+
+
+
+ 
 }
