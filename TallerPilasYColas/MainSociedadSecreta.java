@@ -4,10 +4,10 @@ import java.util.*;
 
 public class MainSociedadSecreta {
     public static void main(String[] args) {
-        System.out.println("=== Ejercicio 6: Sociedad secreta ===");
-        System.out.println("Entrada: [Adam, Sarah, Malcolm] -> " + sociedadSecreta(Arrays.asList("Adam", "Sarah", "Malcolm")) + " (Esperado: AMS)");
-        System.out.println("Entrada: [bruce, clark, diana] -> " + sociedadSecreta(Arrays.asList("bruce", "clark", "diana")) + " (Esperado: BCD)");
-        System.out.println("Entrada: [Zoe, anna, leo] -> " + sociedadSecreta(Arrays.asList("Zoe", "anna", "leo")) + " (Esperado: ALZ)");
+    
+        System.out.println("Entrada: [Adam, Sarah, Malcolm] " + sociedadSecreta(Arrays.asList("Adam", "Sarah", "Malcolm")) + " ");
+        System.out.println("Entrada: [bruce, clark, diana]  " + sociedadSecreta(Arrays.asList("bruce", "clark", "diana")) + "");
+        System.out.println("Entrada: [Zoe, anna, leo]       " + sociedadSecreta(Arrays.asList("Zoe", "anna", "leo")) + "");
     }
 
     public static String sociedadSecreta(List<String> nombres) {

@@ -5,9 +5,10 @@ import java.util.Queue;
 
 public class MainGuerraDenumeros {
     public static void main(String[] args) {
-        System.out.println("=== Ejercicio 8: Guerra de números ===");
-        System.out.println("Entrada: [2, 8, 7, 5] -> " + guerraDeNumeros(new int[]{2, 8, 7, 5}) + " (Esperado: 2)");
-        System.out.println("Entrada: [1, 3, 5, 9] -> " + guerraDeNumeros(new int[]{1, 3, 5, 9}) + " (Esperado: 18)");
+    
+        System.out.println("Entrada: [2, 8, 7, 5] Respuesta = " + guerraDeNumeros(new int[]{2, 8, 7, 5}) + " (Impares: 7 + 5 = 12, Pares: 2 + 8 = 10, Diferencia |12-10|  = 2) ");
+        System.out.println("Entrada: [1, 3, 5, 9] Respuesta = " + guerraDeNumeros(new int[]{1, 3, 5, 9}) + " (Impares: 1 + 3 + 5 + 9 = 18, Pares: 0, Diferencia  |18-0|  = 18) ");
+        System.out.println("Entrada: [2, 4, 6, 8] Respuesta = " + guerraDeNumeros(new int[]{2, 4, 6, 8}) + " (Impares: 0, Pares: 2 + 4 + 6 + 8 = 20, Diferencia  |0-20|  = 20) ");    
     }
 
     public static int guerraDeNumeros(int[] numeros) {

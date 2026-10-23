@@ -5,9 +5,8 @@ import java.util.Queue;
 
 public class MainFormataTelefono {
     public static void main(String[] args) {
-        System.out.println("=== Ejercicio 4: Formateo de número telefónico (Cola) ===");
-        System.out.println("Entrada: [1,2,3,4,5,6,7,8,9,0] -> " + formatearTelefono(new int[]{1,2,3,4,5,6,7,8,9,0}));
-        System.out.println("Entrada: [3,0,0,1,2,3,4,5,6,7] -> " + formatearTelefono(new int[]{3,0,0,1,2,3,4,5,6,7}));
+        System.out.println("Entrada: [1,2,3,4,5,6,7,8,9,0]  " + formatearTelefono(new int[]{1,2,3,4,5,6,7,8,9,0}));
+        System.out.println("Entrada: [3,0,0,1,2,3,4,5,6,7]  " + formatearTelefono(new int[]{3,0,0,1,2,3,4,5,6,7}));
     }
 
     public static String formatearTelefono(int[] digitos) {

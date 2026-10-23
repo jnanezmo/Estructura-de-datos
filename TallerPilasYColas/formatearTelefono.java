@@ -2,6 +2,14 @@ package TallerPilasYColas;
 
 import java.util.LinkedList;
 import java.util.Queue;
+// Formateo de numero telefonico (Cola)
+
+//Enunciado. Dado un arreglo de 10 digitos, construir la cadena con formato (ddd) ddd-dddd consumiendo los digitos en orden FIFO desde una cola. Validar que se entreguen exactamente 10 digitos.
+
+//Entrada: [1,2,3,4,5,6,7,8,9,0]
+//Entrada: [3,1,9,2,4,0,6,1,2,9]
+//Salida esperada: (123) 456-7890
+//Salida esperada: (300) 123-4567
 
 public class formatearTelefono {
     // 4. Formateo de número telefónico (Cola)
